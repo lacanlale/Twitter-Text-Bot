@@ -13,20 +13,20 @@ def text_tweet():
 
 def next_text():
     num = current_index()
-    with open('/Users/admin/datebot/tweets.txt', "r") as file:
+    with open('PATH', "r") as file:
 	for line in range(num+1):
 		path = file.readline().strip()
 	print(path)
 	return path
 
 def increment_file(num):
-	with open('/Users/admin/datebot/tweet_index.txt', "w") as file:
+	with open('PATH', "w") as file:
 		file.truncate()
 		file.write('%d' % (num+1))
 		file.close
 
 def current_index():
-	with open('/Users/admin/datebot/tweet_index.txt', "r") as file:
+	with open('PATH', "r") as file:
 		num = file.readline().strip()
 	file.close()
 	return int(num)
